@@ -11,6 +11,10 @@ br
         = link_to article.title, article_path(article)
       .card-body
         = truncate(article.description, length: 100)
+      .small.article-meta-details 
+        = "Created By: " + article.user.username + " " + time_ago_in_words(article.created_at) + " ago"
+        br
+        = "Edited By: " + article.user.username + " " + time_ago_in_words(article.updated_at) + " ago"
       .card-actions
         = link_to "Edit this article", edit_article_path(article), class: "btn btn-sm btn-primary"
         = link_to "Delete this article", article_path(article),
