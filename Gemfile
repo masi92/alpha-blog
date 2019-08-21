@@ -13,6 +13,7 @@ gem 'slim-rails', '~> 3.1', '>= 3.1.1'
 
 gem "autoprefixer-rails"
 
+gem 'bcrypt', '~> 3.1', '>= 3.1.12'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
