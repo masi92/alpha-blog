@@ -20,8 +20,7 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(article_params)
     if @article.save
-      flash[:success] = 'Article was successfully created.'
-      redirect_to article_path(@article)
+      redirect_to article_path(@article), notice:  'Article was successfully created.'
     else
       render 'new'
     end
@@ -30,8 +29,7 @@ class ArticlesController < ApplicationController
   # PATCH/PUT /articles/1
   def update
     if @article.update(article_params)
-      flash[:success] = 'Article was successfully updated.'
-      redirect_to article_path(@article)
+      redirect_to article_path(@article), notice: 'Article was successfully updated.'
     else
       render 'edit'
     end
@@ -45,8 +43,7 @@ class ArticlesController < ApplicationController
   # DELETE /articles/1.json
   def destroy
     @article.destroy
-    flash[:danger] = 'Article was successfully destroyed.'
-    redirect_to articles_path
+    redirect_to articles_path, notice: 'Article was successfully destroyed.'
   end
 
   private

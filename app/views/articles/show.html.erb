@@ -1,14 +1,24 @@
-<p id="notice"><%= notice %></p>
+<% unless notice.nil? %>
+  <div class="alert alert-success col-md-8 offset-md-2" id="notice">
+    <%= notice %>
+    <a href="#" class="close" data-dismiss="alert">&#215;</a>
+  </div>
+<% end %>
 
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @article.description %>
-</p>
-
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
+<h2 align="center">Title: <%= @article.title %></h2><br>
+<div class="row">
+  <div class="card bg-light col-md-12">
+    <h4 class="center description"><strong>Description:</strong></h4>
+    <hr>
+    <%= simple_format(@article.description) %>
+    <div class="article-actions">
+      <%= link_to "Edit this article", edit_article_path(@article), class: "btn btn-sm btn-primary" %>
+      <%= link_to "Delete this article", article_path(@article),
+        method: :delete,
+        data: { confirm: "Are you sure you want to delete this article?"},
+        class: "btn btn-sm btn-danger"  %>
+      <%= link_to "View all articles", articles_path, class: "btn btn-sm btn-success" %>
+    </div><br>
+  </div>
+</div>

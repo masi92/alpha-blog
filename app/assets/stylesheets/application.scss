@@ -68,9 +68,38 @@
     border-color: #fff;
 }
 
+.btn-sm {
+    margin-top: 10px;
+}
+
 .btn-xlarge:hover {
     background-color: rgba(61, 61, 61, 0.50);
     border-color: #fff;
+}
+
+.card-actions {
+    border-top: 1px solid #eaeaea;
+    padding-top: 5px;
+}
+
+.description {
+    margin-top: 10px;
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 1.5em;
+    margin: 10px;
+}
+
+.card-body {
+    border-top: 1px solid #eaeaea;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#notice {
+    text-align: center;
 }
 
 footer {
