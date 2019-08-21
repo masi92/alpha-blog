@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   get 'about', to: 'pages#about'
 
   resources :articles
+
+  get 'signup', to: 'users#new'
 end
