@@ -27,7 +27,6 @@ class UsersController < ApplicationController
             redirect_to articles_path, notice: "Your account was updated successfully"
         end
         else
-            render 'edit'
         end
     end
 

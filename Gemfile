@@ -15,6 +15,10 @@ gem "autoprefixer-rails"
 
 gem 'bcrypt', '~> 3.1', '>= 3.1.12'
 
+gem 'will_paginate', '~> 3.1', '>= 3.1.6'
+
+gem 'will_paginate-bootstrap4'
+
 gem 'activerecord', '~> 5.0', '>= 5.0.0.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
