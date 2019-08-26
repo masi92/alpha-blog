@@ -1,9 +1,10 @@
 <h1 align="center"> All Alpha Bloggers </h1>
+<br>
 <div align="center">
     <% @users.each do |user| %>
         <ul class="listing">
             <div class="row">
-                <div class="card bg-light col-md-4 offset-md-4">
+                <div class="card kayttajat bg-light col-md-4 offset-md-4">
                     <li><%= link_to gravatar_for(user), user_path(user) %></li>
                     <li class="article-title">
                         <%= link_to user.username, user_path(user) %>
