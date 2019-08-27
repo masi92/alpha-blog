@@ -1,4 +1,10 @@
 <div class="center jumbotron">
+    <% unless notice.nil? %>
+    <div class="alert alert-success col-md-8 offset-md-2" id="notice">
+        <%= notice %>
+        <a href="#" class="close" data-dismiss="alert">&#215;</a>
+    </div>
+    <% end %>
     <h1>ALPHA BLOG</h1>
     <%= link_to 'Sign up', signup_path, class: "btn btn-primary btn-xlarge" %></p>
 </div>
