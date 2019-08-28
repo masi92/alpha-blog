@@ -16,18 +16,14 @@
 
  @import "bootstrap";
 
- .navbar-brand {
-     float: left !important; 
-     font-size: 1.7em !important;
-     text-transform: uppercase !important;
-     letter-spacing: -1px !important;
-     font-weight: bold !important;
-     color: #fff !important;
- }
-
- .a {
-     color: #fff;
- }
+//  .navbar-brand {
+//      float: left !important; 
+//      font-size: 1.7em !important;
+//      text-transform: uppercase !important;
+//      letter-spacing: -1px !important;
+//      font-weight: bold !important;
+//      color: #fff !important;
+//  }
 
  .nav-link {
      color: #fff !important;
@@ -37,6 +33,14 @@
     color: #fff;
     text-decoration: none;
  }
+
+ button:focus {
+    outline: 0;
+}
+
+.navbar .dropdown-menu .form-control {
+    width: 200px;
+}
 
  .center {
      text-align: center;
