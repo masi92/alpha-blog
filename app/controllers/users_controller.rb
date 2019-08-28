@@ -11,7 +11,7 @@ class UsersController < ApplicationController
     def create
         @user = User.new(user_params)
         if @user.save
-            redirect_to articles_path, notice: "welcome to the alpha blog #{@user.username}"
+            redirect_to user_path(@user), notice: "welcome to the alpha blog #{@user.username}"
         else
             render 'new'
         end
