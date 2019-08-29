@@ -1,16 +1,16 @@
 .container
     .row.articlerow
-        - @articles.each_slice(6) do |article|
-            - @articles.each do |article|
-                .card.bg-light.col-md-6
-                    .card-title
-                        = link_to article.title, article_path(article)
-                    .card-body
-                        = truncate(article.description, length: 100)
-                    .small.article-meta-details 
-                        = "Created By: " + article.user.username + " " + time_ago_in_words(article.created_at) + " ago"
-                        br
-                        = "Edited By: " + article.user.username + " " + time_ago_in_words(article.updated_at) + " ago"
+        - @articles.each do |article|
+            .card.bg-light.col-md-6
+                .card-title
+                    = link_to article.title, article_path(article)
+                .card-body
+                    = truncate(article.description, length: 100)
+                .small.article-meta-details 
+                    = "Created By: " + article.user.username + " " + time_ago_in_words(article.created_at) + " ago"
+                    br
+                    = "Edited By: " + article.user.username + " " + time_ago_in_words(article.updated_at) + " ago"
+                - if logged_in? && current_user == article.user
                     .card-actions
                         = link_to "Edit this article", edit_article_path(article), class: "btn btn-sm btn-primary"
                         = link_to "Delete this article", article_path(article),

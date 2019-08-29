@@ -4,12 +4,15 @@
     <a href="#" class="close" data-dismiss="alert">&#215;</a>
   </div>
 <% end %>
-<h1 align="center">Welcome to <%= current_user.username %>'s page</h1>
+<h1 align="center">Welcome to <%= @user.username %>'s page</h1>
 <div class="row">
     <div class="col-md-12 col-md-offset-4 center">
-      <%= link_to gravatar_for(current_user.email), user_path(current_user) %>
+      <%= link_to gravatar_for(@user.email) %>
     </div>
 </div>
-<h4 align="center"><%= current_user.username %>'s articles</h4>
+<h4 align="center"><%= @user.username %>'s articles</h4>
+<div class="center">
+  <%= will_paginate @user_articles %>
+</div>
 
-
+<%= render 'articles/artikkeli', obj: @user_articles %>
