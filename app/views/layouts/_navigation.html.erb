@@ -28,6 +28,7 @@
                   <%= current_user.username %>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" <%= link_to "Admin" if current_user.admin %></a>
                   <a class="dropdown-item" <%= link_to "Profile", user_path(current_user) %></a>
                   <a class="dropdown-item" <%= link_to "Edit Profile", edit_user_path(current_user) %></a>
                   <div class="dropdown-divider"></div>
