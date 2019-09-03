@@ -1,3 +1,10 @@
+<% unless notice.nil? %>
+<div class="alert alert-success col-md-4 offset-md-4" id="notice">
+    <%= notice %>
+    <a href="#" class="close" data-dismiss="alert">&#215;</a>
+</div>
+<% end %>
+
 <h1 align="center"><%= "Category: " + @category.name %></h1>
 <div align="center">
   <% if logged_in? and current_user.admin? %>
@@ -6,7 +13,9 @@
     </div>
   <% end %>
 </div>
+<br>
 <%= render 'articles/artikkeli', obj: @category_articles %>
+<br>
 <div class="centered">
   <%= will_paginate @category_articles %>
 </div>
